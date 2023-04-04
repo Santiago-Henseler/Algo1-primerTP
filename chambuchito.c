@@ -23,6 +23,8 @@ const char SIN_PROTE = 'N';
 const char NO_CALENTAR = 'N';
 const char SI_CALENTAR = 'S';
 
+const float AJUSTE_PRECIO = 0.3;
+
 // PRE: - 
 // POST: Selecciona el tamaño de pan deseado por el usuario en un intervalo = [15,30]
 void TAMAÑO_PAN(int* tamaño){
@@ -101,7 +103,7 @@ void TIPO_PROTEINA(char* tipo_proteina, int* total){
 }
 
 //PRE: El usuario debio de elegir una proteina =! a atún
-//POST: -
+//POST: Se le pregunta n veces al usuario hasta que de una respuesta correcta
 void CALENTAR(){
     char caletar = ' ';
 
@@ -119,7 +121,7 @@ void CALENTAR(){
 int CALCULAR_PRECIO(int valor_total, int tamaño){
     int respuesta = 0;
 
-    int valor_tamaño = (int)(0.3 * tamaño);
+    int valor_tamaño = (int)(AJUSTE_PRECIO * tamaño);
 
     respuesta = valor_total * valor_tamaño;
     return respuesta;
