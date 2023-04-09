@@ -23,7 +23,7 @@ const char SIN_PROTE = 'N';
 const char NO_CALENTAR = 'N';
 const char SI_CALENTAR = 'S';
 
-const float AJUSTE_PRECIO = 0.3;
+const double AJUSTE_PRECIO = 0.3;
 
 // PRE: - 
 // POST: Selecciona el tamaño de pan deseado por el usuario en un intervalo = [15,30]
@@ -96,9 +96,9 @@ void TIPO_PROTEINA(char* tipo_proteina, int* total){
         }else if(*tipo_proteina == ATUN){
             *total += 9;
             }else if(*tipo_proteina == SOJA){
-                *total += 5;
+                *total += 3;
                 }else if(*tipo_proteina == POLLITO){
-                    *total += 3;
+                    *total += 5;
                 }
 }
 
@@ -152,4 +152,5 @@ int main(){
     printf("El valor del pedido es -%i-", precio_sanguche);
 
     return 0;
+
 }
